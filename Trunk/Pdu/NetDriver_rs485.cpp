@@ -221,7 +221,7 @@ void rs485_InitNetwork(void)
  }	
  asm("nop");
  rs485_sgCounter=0;
- rs485_lsAddress=((~PINF) & 0x03) + 33;
+ rs485_lsAddress=((~PINF) & 0x07) + 33;
  //lcd_PutNum(18, rs485_lsAddress);
  rs485_InitNetDriver(rs485_lsAddress,0,16,&rs485_RecPackageFunc,&rs485_SetUpPortUartFunc,&rs485_RecToSendFunc,&rs485_SendToRecFunc);
 }
