@@ -3,7 +3,8 @@
 
 #include "main.h"
 #include "ls.h"
-#include "keyboard.h"
+//#include "keyboard.h"
+#include "key.h"
 #include "lcd.h"
 #include "NetDriver_rs485.h"
 #include "listCommand.h"

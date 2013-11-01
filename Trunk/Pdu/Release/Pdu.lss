@@ -10416,7 +10416,7 @@ Disassembly of section .text:
     58b4:	fc 01       	movw	r30, r24
     58b6:	80 81       	ld	r24, Z
     58b8:	80 95       	com	r24
-    58ba:	87 70       	andi	r24, 0x07	; 7
+    58ba:	83 70       	andi	r24, 0x03	; 3
     58bc:	8f 5d       	subi	r24, 0xDF	; 223
     58be:	80 93 0f 07 	sts	0x070F, r24
     58c2:	80 91 0f 07 	lds	r24, 0x070F

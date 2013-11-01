@@ -4,10 +4,11 @@
 #include "timers.h"
 #include "lcd.h"
 #include "general.h"
-#include "keyboard.h"
+//#include "keyboard.h"
 #include "NetDriver_rs485.h"
 #include "adc.h"
 #include "ls.h"
+#include "key.h"
 
 void initPorts();
 
@@ -56,9 +57,10 @@ void initPorts(void){
 	timers_InitVirtualTimers();
 	initDelay();
 	lcd_InitLCD();
-	keyboard_Init();
+//	keyboard_Init();
 	rs485_InitNetwork();
 	ls_Init();
+	Key::init();
 }
 
 int main(void){

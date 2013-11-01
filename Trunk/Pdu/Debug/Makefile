@@ -37,7 +37,7 @@ SUBDIRS :=
 C_SRCS +=  \
 ../adc.cpp \
 ../general.cpp \
-../keyboard.cpp \
+../key.cpp \
 ../lcd.cpp \
 ../ls.cpp \
 ../NetDriver_rs485.cpp \
@@ -54,7 +54,7 @@ ASM_SRCS +=
 OBJS +=  \
 adc.o \
 general.o \
-keyboard.o \
+key.o \
 lcd.o \
 ls.o \
 NetDriver_rs485.o \
@@ -65,7 +65,7 @@ timers.o
 OBJS_AS_ARGS +=  \
 adc.o \
 general.o \
-keyboard.o \
+key.o \
 lcd.o \
 ls.o \
 NetDriver_rs485.o \
@@ -76,7 +76,7 @@ timers.o
 C_DEPS +=  \
 adc.d \
 general.d \
-keyboard.d \
+key.d \
 lcd.d \
 ls.d \
 NetDriver_rs485.d \
@@ -87,7 +87,7 @@ timers.d
 C_DEPS_AS_ARGS +=  \
 adc.d \
 general.d \
-keyboard.d \
+key.d \
 lcd.d \
 ls.d \
 NetDriver_rs485.d \
@@ -124,7 +124,7 @@ OUTPUT_FILE_DEP:= ./makedep.mk
 ./%.o: .././%.cpp
 	@echo Building file: $<
 	@echo Invoking: AVR8/GNU C++ Compiler : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
-	$(QUOTE)D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -O0 -fshort-enums -Wall -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mmcu=atmega128   -o"$@" "$<" 
+	$(QUOTE)D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-g++.exe$(QUOTE) -funsigned-char -funsigned-bitfields -O0 -fpack-struct -fshort-enums -g2 -Wall -c -MD -MP -MF "$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -MT"$(@:%.o=%.o)"  -mmcu=atmega128   -o"$@" "$<" 
 	@echo Finished building: $<
 
 
@@ -152,7 +152,7 @@ all: $(OUTPUT_FILE_PATH) $(ADDITIONAL_DEPENDENCIES)
 $(OUTPUT_FILE_PATH): $(OBJS) $(USER_OBJS) $(OUTPUT_FILE_DEP)
 	@echo Building target: $@
 	@echo Invoking: AVR8/GNU Linker : (AVR_8_bit_GNU_Toolchain_3.4.0_663) 4.6.2
-	$(QUOTE)D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="Pdu.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group  -mmcu=atmega128  
+	$(QUOTE)D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-g++.exe$(QUOTE) -o$(OUTPUT_FILE_PATH_AS_ARGS) $(OBJS_AS_ARGS) $(USER_OBJS) $(LIBS) -Wl,-Map="Pdu.map" -Wl,--start-group  -Wl,--end-group  -mmcu=atmega128  
 	@echo Finished building target: $@
 	"D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature  "Pdu.elf" "Pdu.hex"
 	"D:\Program Files\Atmel\Atmel Studio 6.0\extensions\Atmel\AVRGCC\3.4.0.65\AVRToolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "Pdu.elf" "Pdu.eep" || exit 0
