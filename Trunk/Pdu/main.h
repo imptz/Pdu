@@ -41,5 +41,6 @@ extern unsigned char f_avar[3];
 //#define BEZ_SK
 //#define ELR
 //#define FIRE_KEY
+#define ZATVOR_2
 
 #endif
