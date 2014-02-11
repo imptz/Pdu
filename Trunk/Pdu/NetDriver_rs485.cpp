@@ -115,6 +115,7 @@ void rs485_SendControlSum(void)
 
 void rs485_StartSend(void)
 {
+ rs485_sendBuf[0] = 254;
  if ((rs485_f_sending==0)&&(rs485_sendBuf[20]!=0))
   {
    rs485_f_sending=1;
@@ -234,6 +235,8 @@ void rs485_RecPackageFunc(void)
 {
  unsigned int i;
  static int gateNum = 0;
+
+rs485_receiveBuf[1] = 1;
 
  switch (rs485_receiveBuf[2])
   {

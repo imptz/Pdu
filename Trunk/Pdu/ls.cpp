@@ -43,7 +43,7 @@ void ls_Init()
  ls_keyMode_3_time = 0;
  ls_keyMode_4_time = 0;
 #ifdef BEZ_SK
- ls_currentLs=254;
+ ls_currentLs=1;
 #else
  ls_currentLs=0;
 #endif 
