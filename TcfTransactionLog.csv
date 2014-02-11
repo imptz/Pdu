@@ -1,27 +1,3 @@
 Service , Message , Max , Min , Average , Count , frequency , TimedOut
 
-Stream,setLogBits,78.125,78.125,78.125,1,0
-Tool,setupTool,261.7188,20.5078,54.1992166666667,3,0
-Tool,getContext,2.9297,0.9765,0.424528333333333,6,0
-Tool,connect,1.9531,0,0.488266666666667,3,0
-Tool,setProperties,902.3437,628.9062,473.307266666667,3,0
-Device,getContext,1.9531,0.9766,0.976566666666667,3,0
-Processes,launch,247.0703,72.2656,78.28775,3,0
-Processes,getContext,1.9532,0.9766,1.13935,3,0
-RunControl,getContext,1.9531,0.9765,1.1393,3,0
-Memory,getChildren,2.9297,0.9766,1.46486666666667,3,0
-RunControl,setProperties,0.9766,0.9765,0.651033333333333,3,0
-Memory,getContext,2.9297,0.9765,0.100117044647151,21,0
-RunControl,resume,1.9532,0,0.100614292410714,10,0
-Trace,getChildren,1.9532,0.9766,0.9766,3,0
-Trace,getContext,1.9531,0.9766,1.13931666666667,3,0
-StackTrace,getChildren,3.9062,0,0.312729702380952,7,0
-Expressions,compute,31.25,1.9531,0.229778552009013,22,0
-Breakpoints,add,6.836,3.9062,3.2552,3,0
-Breakpoints,getProperties,1.9532,0.9766,0.9766,3,0
-LineNumbers,mapToSource,6.8359,0,0.118504739908537,17,0
-Memory,get,8.789,0,0.188556591842835,22,0
-Registers,getm,24.4141,6.8359,3.70299773809524,7,0
-Processes,terminate,196.2891,170.8985,118.652383333333,3,0
-Tool,tearDownTool,4.8828,2.9297,2.60415,3,0
-Breakpoints,getError,3.9063,3.9063,3.9063,1,0
+Stream,setLogBits,555.184,555.184,555.184,1,0

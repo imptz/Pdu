@@ -32,3 +32,5 @@ extern int rs485_debugCounter1;
 extern char rs485_address;
 extern void rs485_FillPackageG(char da,char sa,char com,char npar, ...);
 void rs485_RecToSendFunc(void);
+
+extern void rs485_RecPackageFunc(void);
