@@ -238,8 +238,9 @@ void rs485_RecPackageFunc(void)
  unsigned int i;
  static int gateNum = 0;
 
-rs485_receiveBuf[1] = 1;
-
+#ifdef BEZ_SK
+	rs485_receiveBuf[1] = 1;
+#endif
  switch (rs485_receiveBuf[2])
   {
    case testNCDevice:
