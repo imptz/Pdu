@@ -115,7 +115,9 @@ void rs485_SendControlSum(void)
 
 void rs485_StartSend(void)
 {
+#ifdef BEZ_SK	
  rs485_sendBuf[0] = 254;
+#endif
  if ((rs485_f_sending==0)&&(rs485_sendBuf[20]!=0))
   {
    rs485_f_sending=1;
