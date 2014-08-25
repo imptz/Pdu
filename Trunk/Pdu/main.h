@@ -38,9 +38,9 @@ extern unsigned char f_avar[3];
 //#define EngL
 //#define COORDVIEW
 #define POVOROT
-//#define BEZ_SK
+#define BEZ_SK
 //#define ELR
 //#define FIRE_KEY
-//#define ZATVOR_2
+#define ZATVOR_2
 
 #endif
